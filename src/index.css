@@ -1,0 +1,53 @@
+@import url("bootstrap");
+
+@import url("bootstrap-icons");
+
+:root {
+  --navbar-border: rgba(0, 0, 0, 0.357);
+  --navbar-active: purple;
+}
+
+#layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header {
+
+  #nav-item {
+    color: black;
+    border-left: 1px solid var(--navbar-border);
+    border-right: 1px solid var(--navbar-border);
+
+    &.active {
+      color: var(--navbar-active);
+    }
+
+  }
+}
+
+.card-subtitle {
+  text-align: end;
+  opacity: 80%;
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-img {
+  max-width: 100%;
+}
+
+#error-page,
+#loading-screen {
+  min-height: 80vh;
+}
