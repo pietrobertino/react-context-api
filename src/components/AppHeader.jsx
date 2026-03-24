@@ -5,7 +5,7 @@ import BudgetContext from "../contexts/BudgetContext"
 
 export default function AppHeader() {
 
-    const { setBudgetMode, budgetMode } = useContext(BudgetContext);
+    const { setMaxPrice, maxPrice } = useContext(BudgetContext);
 
     return (
         <header>
@@ -14,7 +14,7 @@ export default function AppHeader() {
                     {menu.map(navItem => (
                         <NavLink key={navItem.id} to={navItem.path} className=" text-decoration-none px-3" id="nav-item">{navItem.text}</NavLink>
                     ))}
-                    <button onClick={() => setBudgetMode(!budgetMode)} className="ms-2">{budgetMode ? "Disattiva budget mode" : "Attiva budget mode"}</button>
+                    <input type="number" placeholder="Filtra prodotti per prezzo max" name="maxPrice" className="ms-3" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
                 </nav>
             </div>
         </header>
