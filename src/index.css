@@ -29,6 +29,11 @@ header {
     }
 
   }
+
+  button {
+    border: none;
+    background: none;
+  }
 }
 
 .card-subtitle {
