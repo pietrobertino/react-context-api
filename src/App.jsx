@@ -10,7 +10,7 @@ import { useState } from "react"
 
 function App() {
 
-  const [maxPrice, setMaxPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState("");
 
   return (
     <>
